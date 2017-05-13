@@ -2,6 +2,27 @@
  * Style tweaks
  * --------------------------------------------------
  */
+#myModal{
+    top:40%;
+}
+#sidebar{
+    position: fixed;
+    right:5%;
+    vertical-align: middle;
+}
+a:hover{
+    text-decoration: none;
+}
+.plus{
+    background-color: beige;
+    text-align: center;
+}
+.content{
+    margin-top: 5%;
+}
+.timetable{
+    height:100%;
+}
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
