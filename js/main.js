@@ -2,7 +2,7 @@
  * Created by kde713 on 2017. 5. 14..
  */
 
-
+var global_friends_list;
 function procFriends() {
     showLoader();
     $.ajax({
@@ -11,10 +11,22 @@ function procFriends() {
         data: "session_id=" + getSessionId(),
         success: function (data) {
             hideLoader();
-
             if (data.result) {
-                const friends_list = data.data;
+                global_friends_list=const friends_list = data.data;
                 // TODO: Render friends
+                temp=$(".list-group-item hide").clone().insertAfter("#friend_group").removeClass("hide");
+                for(obj in friends_list){
+                    /*
+                     "name": name,
+            "id": int(id),
+            "userid": userid,
+            "nickname": nickname,
+            "picture": picture
+                    */
+                    $(temp).text(obj.name
+                }
+                
+                
             } else {
                 if (data.message == "auth.notexist") {
                     alert("세션이 만료되었습니다");

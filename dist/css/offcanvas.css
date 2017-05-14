@@ -2,6 +2,9 @@
  * Style tweaks
  * --------------------------------------------------
  */
+.hide{
+    display: none;
+}
 #overlay {
     position: fixed;
     z-index: 99999;
