@@ -142,7 +142,7 @@ function refreshTimetable(time_data) {
             "<li class='single-event' data-start='"+time_data[i][j].start_time+"' data-end='"+timecollid+"' data-event='"+"event-"+Math.floor((Math.random() * 4) + 1)+"'><a href='#0'><em class='event-name'></em></a></li>");
         }
     }
-    initSchedule();
+    initMySchedule();
 }
 
 window.onload = function () {

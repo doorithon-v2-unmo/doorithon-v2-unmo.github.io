@@ -177,7 +177,7 @@ function getScheduleTimestamp(time) {
 		});
 	}
 
-function initSchedule() {
+function initMySchedule() {
     var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );
 	//if browser does not support transitions - use a different event to trigger them
@@ -197,7 +197,7 @@ function initSchedule() {
 			objSchedulesPlan.push(new SchedulePlan($(this)));
 		});
         objSchedulesPlan.forEach(function(element){
-			element.scheduleReset();
+			element.initSchedule();
 		});
 	}
 
