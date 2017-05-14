@@ -35,11 +35,8 @@ window.onload = function () {
         location.href = "./main.html";
     }
     else{
-        $("#submit").on("click",function(){
-            $("#submit").on("click",function(){
-                console.log($("#inputId").value);
-                procLogin($("#inputId").attr("value"),$("#inputPassword").attr("value")); 
-            });
+        $("#submit").on("click",function(){           
+            procLogin($("#inputId").val(),$("#inputPassword").val()); 
         });
     }
 };
