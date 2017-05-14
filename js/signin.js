@@ -2,10 +2,7 @@
  * Created by kde713 on 2017. 5. 14..
  */
 
-function procLogin() {
-    const user_id = "";
-    const user_pwd = "";
-
+function procLogin(user_id,user_pwd) {
     showLoader();
     $.ajax({
         type: "POST",

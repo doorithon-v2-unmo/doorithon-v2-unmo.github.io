@@ -34,6 +34,12 @@
   </head>
 
   <body>
+      
+    <div id="overlay" style="display:none;">
+        <div id="indicator">
+            <div class="loader">Loading...</div>
+        </div>
+    </div>
     <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">
@@ -281,8 +287,7 @@
         </div>
       </div>
     </div><!--/.container-->
-
-
+      
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -297,5 +302,6 @@
 	if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script>
 <script src="./dist/js/main.js"></script> <!-- Resource jQuery -->
+<script src="./js/base.js"></script> <!-- Resource jQuery -->
   </body>
 </html>

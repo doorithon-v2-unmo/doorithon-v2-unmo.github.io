@@ -16,8 +16,17 @@ function clearSessionId() {
 
 function showLoader() {
     // TODO: Show Loader
+    $("#overlay").show();
 }
 
 function hideLoader() {
     // TODO: Hide Loader
+    $("#overlay").hide();
+    
+}
+function login(){
+    $("#submit").on("click",function(){
+        console.log($("#inputId").value);
+       procLogin($("#inputId").value,$("#inputPassword").value); 
+    });
 }
