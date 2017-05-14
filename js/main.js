@@ -139,7 +139,7 @@ function refreshTimetable(time_data) {
             var timecollid = time_data[i][j].end_time;
             timecollid=timecollid.replace(":05",":00");
             $($(".events-group")[i]).find('ul').append(
-            "<li class='single-event' data-start='"+time_data[i][j].start_time+"' data-end='"+timecollid+"' data-content='' data-event='"+"event-"+Math.floor((Math.random() * 4) + 1)+"'><a href='#0'><em class='event-name'></em></a></li>");
+            "<li class='single-event' data-start='"+time_data[i][j].start_time+"' data-end='"+timecollid+"' data-event='"+"event-"+Math.floor((Math.random() * 4) + 1)+"'><a href='#0'><em class='event-name'></em></a></li>");
         }
     }
     initSchedule();
