@@ -181,6 +181,10 @@ function getScheduleTimestamp(time) {
 		});
 	}
 
+function resetTimetableContainer() {
+    $("#timetable_container").html('<div class="cd-schedule loading"><div class=timeline><ul><li><span>09:00</span><li><span>09:30</span><li><span>10:00</span><li><span>10:30</span><li><span>11:00</span><li><span>11:30</span><li><span>12:00</span><li><span>12:30</span><li><span>13:00</span><li><span>13:30</span><li><span>14:00</span><li><span>14:30</span><li><span>15:00</span><li><span>15:30</span><li><span>16:00</span><li><span>16:30</span><li><span>17:00</span><li><span>17:30</span><li><span>18:00</span></ul></div><div class=events><ul><li class=events-group><div class=top-info><span>Monday</span></div><ul></ul><li class=events-group><div class=top-info><span>Tuesday</span></div><ul></ul><li class=events-group><div class=top-info><span>Wednesday</span></div><ul></ul><li class=events-group><div class=top-info><span>Thursday</span></div><ul></ul><li class=events-group><div class=top-info><span>Friday</span></div><ul></ul></ul></div><div class=cover-layer></div></div>');
+}
+
 function initMySchedule() {
     var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );

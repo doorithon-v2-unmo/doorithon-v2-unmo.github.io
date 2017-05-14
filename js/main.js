@@ -113,6 +113,7 @@ function ajaxSubmit() {
             hideLoader();
 
             if (data.result) {
+                resetTimetableContainer();
                 refreshTimetable(data.data.avaliable_times);
             } else {
                 if (data.message == "auth.notexist") {
