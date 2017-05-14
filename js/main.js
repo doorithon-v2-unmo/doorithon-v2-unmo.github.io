@@ -12,7 +12,7 @@ function procFriends() {
         success: function (data) {
             hideLoader();
             if (data.result) {
-                global_friends_list=const friends_list = data.data;
+                const friends_list = data.data;
                 // TODO: Render friends
                 temp=$(".list-group-item hide").clone().insertAfter("#friend_group").removeClass("hide");
                 for(obj in friends_list){
