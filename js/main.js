@@ -145,7 +145,6 @@ function refreshTimetable(time_data) {
             $(temp).removeAttr('id');
             
             $(temp).attr("data-event","event-"+Math.floor((Math.random() * 4) + 1));
-            $(temp).attr('data-content',Math.floor((Math.random() * 4) + 1));
             $(temp).appendTo($($(".events-group")[i]).find('ul'));
         }
     }
