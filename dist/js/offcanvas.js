@@ -56,7 +56,7 @@ function setListener() {
 }
 function friendIndexOf(name) {    
     for (var i = 0; i < global_friends_list.length; i++) {
-        if (arr[i].name == name) {
+        if (global_friends_list[i].name == name) {
             return i;
         }
     }
@@ -64,7 +64,7 @@ function friendIndexOf(name) {
 }
 function groupIndexOf(name) {    
     for (var i = 0; i < global_groups_list.length; i++) {
-        if (arr[i].name == name) {
+        if (global_groups_list[i].name == name) {
             return i;
         }
     }
