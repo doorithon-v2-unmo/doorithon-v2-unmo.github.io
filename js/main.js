@@ -135,17 +135,11 @@ function refreshTimetable(time_data) {
     console.log(time_data);
     for(var i in time_data){
         for(var j in time_data[i]){
-            temp=$("#ske_clone").clone();
-
-            $(temp).attr("data-start",time_data[i][j].start_time);
+            
             var timecollid = time_data[i][j].end_time;
             timecollid=timecollid.replace(":05",":00");
-            $(temp).attr("data-end",timecollid);
-            $(temp).removeClass('hide');
-            $(temp).removeAttr('id');
-            
-            $(temp).attr("data-event","event-"+Math.floor((Math.random() * 4) + 1));
-            $(temp).appendTo($($(".events-group")[i]).find('ul'));
+            $($(".events-group")[i]).find('ul').append(
+            "<li class='single-event' data-start='"+time_data[i][j].start_time+"' data-end='"+timecollid+"' data-content='' data-event='"+"event-"+Math.floor((Math.random() * 4) + 1)+"'><a href='#0'><em class='event-name'></em></a></li>");
         }
     }
     initSchedule();
