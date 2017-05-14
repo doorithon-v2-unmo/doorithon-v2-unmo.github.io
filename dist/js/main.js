@@ -9,8 +9,6 @@ jQuery(document).ready(function($){
 	
 
 	var schedules = $('.cd-schedule');
-	var objSchedulesPlan = [],
-		windowResize = false;
 	
 	if( schedules.length > 0 ) {
 		schedules.each(function(){

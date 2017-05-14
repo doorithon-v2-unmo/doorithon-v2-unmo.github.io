@@ -1,3 +1,7 @@
+var objSchedulesPlan = [],
+		windowResize = false;
+
+
 function SchedulePlan( element ) {
 		this.element = element;
 		this.timeline = this.element.find('.timeline');
@@ -188,8 +192,8 @@ function initMySchedule() {
 	
 
 	var schedules = $('.cd-schedule');
-	var objSchedulesPlan = [],
-		windowResize = false;
+	objSchedulesPlan = [];
+    windowResize = false;
 	
 	if( schedules.length > 0 ) {
 		schedules.each(function(){

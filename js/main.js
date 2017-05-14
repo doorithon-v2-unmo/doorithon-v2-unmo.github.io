@@ -2,6 +2,8 @@
  * Created by kde713 on 2017. 5. 14..
  */
 
+
+
 var global_friends_list=new Array();
 var global_groups_list=new Array();
 function procFriends() {
