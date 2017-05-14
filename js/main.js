@@ -160,3 +160,6 @@ window.onload = function () {
         procFriends();
     }
 };
+function add(){
+    alert("test");
+}
