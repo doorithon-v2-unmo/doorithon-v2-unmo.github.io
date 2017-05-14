@@ -25,6 +25,7 @@ function hideLoader() {
     
 }
 function login(){
+    alert("");
     $("#submit").on("click",function(){
         console.log($("#inputId").value);
        procLogin($("#inputId").value,$("#inputPassword").value); 
