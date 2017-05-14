@@ -141,6 +141,8 @@ function refreshTimetable(time_data) {
             var timecollid = time_data[i][j].end_time;
             timecollid=timecollid.replace(":05",":00");
             $(temp).attr("data-end",timecollid);
+            $(temp).removeClass('hide');
+            $(temp).removeAttr('id');
             $(temp).appendTo($($(".events-group")[i]).find('ul'));
         }
     }
