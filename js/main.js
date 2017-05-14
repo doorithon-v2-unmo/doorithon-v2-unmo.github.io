@@ -14,8 +14,8 @@ function procFriends() {
             if (data.result) {
                 const friends_list = data.data;
                 // TODO: Render friends
-                alert("success!");
-                temp=$(".list-group-item hide").clone().insertAfter("#friend_group").removeClass("hide");
+                temp=$("#clone").clone().insertAfter("#friend_category").removeClass("hide");
+                console.log(temp);
                 for(obj in friends_list){
                     /*
                      "name": name,
