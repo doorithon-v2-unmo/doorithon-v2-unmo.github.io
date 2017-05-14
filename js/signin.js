@@ -34,4 +34,9 @@ window.onload = function () {
     if(getSessionId()) {
         location.href = "./main.html";
     }
+    else{
+        $("#submit").on("click",function(){
+            login();
+        });
+    }
 };
