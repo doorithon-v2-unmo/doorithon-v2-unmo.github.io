@@ -94,6 +94,7 @@ function ajaxSubmit() {
     for(var i in global_groups_list){
         global_groups_id_list.push(global_groups_list[i].userid);
     }
+    console.log(global_groups_id_list);
     $.ajax({
         type: "POST",
         url: "https://unmo.herokuapp.com/service/submit",
