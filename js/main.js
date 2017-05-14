@@ -114,4 +114,10 @@ window.onload = function () {
         alert("로그인 후 이용가능합니다!");
         location.href = "./";
     }
+    else{
+        $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+        });
+        procFriends();
+    }
 };
