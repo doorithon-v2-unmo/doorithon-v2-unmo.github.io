@@ -130,7 +130,7 @@ function refreshTimetable(time_data) {
     //for(var i in time_data){
       //  time_data[i]
         //$(".events-group")[i]
-    }
+    //}
 }
 
 window.onload = function () {
