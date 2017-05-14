@@ -72,17 +72,7 @@ jQuery(document).ready(function($){
 			//detect click on the event and open the modal
 			$(this).on('click', 'a', function(event){
 				event.preventDefault();
-				if( !self.animating ) self.openModal($(this));
 			});
-		});
-
-		//close modal window
-		this.modal.on('click', '.close', function(event){
-			event.preventDefault();
-			if( !self.animating ) self.closeModal(self.eventsGroup.find('.selected-event'));
-		});
-		this.element.on('click', '.cover-layer', function(event){
-			if( !self.animating && self.element.hasClass('modal-is-open') ) self.closeModal(self.eventsGroup.find('.selected-event'));
 		});
 	};
 
@@ -105,7 +95,6 @@ jQuery(document).ready(function($){
 		this.element.removeClass('loading');
 	};
 
-	
 	SchedulePlan.prototype.mq = function(){
 		//get MQ value ('desktop' or 'mobile') 
 		var self = this;
@@ -193,14 +182,6 @@ jQuery(document).ready(function($){
 		if( !windowResize ) {
 			windowResize = true;
 			(!window.requestAnimationFrame) ? setTimeout(checkResize) : window.requestAnimationFrame(checkResize);
-		}
-	});
-
-	$(window).keyup(function(event) {
-		if (event.keyCode == 27) {
-			objSchedulesPlan.forEach(function(element){
-				element.closeModal(element.eventsGroup.find('.selected-event'));
-			});
 		}
 	});
 

@@ -148,8 +148,6 @@ function refreshTimetable(time_data) {
             $(temp).appendTo($($(".events-group")[i]).find('ul'));
         }
     }
-    $.SchedulePlan(document).initSchedule();
-    $.SchedulePlan(document).placeEvents();
     
 }
 
