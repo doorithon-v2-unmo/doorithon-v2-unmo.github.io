@@ -143,6 +143,8 @@ function refreshTimetable(time_data) {
             $(temp).attr("data-end",timecollid);
             $(temp).removeClass('hide');
             $(temp).removeAttr('id');
+            
+            $(temp).attr("data-event","event-"+Math.floor((Math.random() * 4) + 1));
             $(temp).appendTo($($(".events-group")[i]).find('ul'));
         }
     }
