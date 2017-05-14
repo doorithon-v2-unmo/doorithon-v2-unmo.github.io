@@ -24,10 +24,3 @@ function hideLoader() {
     $("#overlay").hide();
     
 }
-function login(){
-    alert("");
-    $("#submit").on("click",function(){
-        console.log($("#inputId").value);
-       procLogin($("#inputId").value,$("#inputPassword").value); 
-    });
-}

@@ -36,7 +36,10 @@ window.onload = function () {
     }
     else{
         $("#submit").on("click",function(){
-            login();
+            $("#submit").on("click",function(){
+                console.log($("#inputId").value);
+                procLogin($("#inputId").attr("value"),$("#inputPassword").attr("value")); 
+            });
         });
     }
 };
