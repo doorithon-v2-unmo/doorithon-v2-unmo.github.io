@@ -100,7 +100,7 @@ function ajaxSubmit() {
         url: "https://unmo.herokuapp.com/service/submit",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        data: JSON.stringify({"session_id": getSessionId(), "users": [global_groups_id_list[0],global_groups_id_list[1]]}),
+        data: JSON.stringify({"session_id": getSessionId(), "users": global_groups_id_list}),
         success: function (data) {
             hideLoader();
 
@@ -127,10 +127,10 @@ function ajaxSubmit() {
 function refreshTimetable(time_data) {
     // TODO: Refresh view with ajax data
     console.log(time_data);
-    //for(var i in time_data){
-      //  time_data[i]
-        //$(".events-group")[i]
-    //}
+    for(var i in time_data){
+        /*$()
+        $(".events-group")[time_data[i].day]*/
+    }
 }
 
 window.onload = function () {
