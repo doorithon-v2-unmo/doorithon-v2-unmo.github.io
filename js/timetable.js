@@ -196,6 +196,9 @@ function initSchedule() {
 			//create SchedulePlan objects
 			objSchedulesPlan.push(new SchedulePlan($(this)));
 		});
+        objSchedulesPlan.forEach(function(element){
+			element.scheduleReset();
+		});
 	}
 
 	$(window).on('resize', function(){
