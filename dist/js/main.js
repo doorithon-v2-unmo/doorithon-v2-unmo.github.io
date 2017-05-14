@@ -1,4 +1,4 @@
-function initSke($){
+jQuery(document).ready(function($){
 	var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );
 	//if browser does not support transitions - use a different event to trigger them
@@ -228,4 +228,4 @@ function initSke($){
 			'transform': value
 		});
 	}
-}
+});
