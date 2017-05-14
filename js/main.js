@@ -148,6 +148,7 @@ function refreshTimetable(time_data) {
             $(temp).appendTo($($(".events-group")[i]).find('ul'));
         }
     }
+    initSke();
 }
 
 window.onload = function () {
