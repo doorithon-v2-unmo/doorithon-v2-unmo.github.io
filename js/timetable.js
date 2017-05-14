@@ -159,6 +159,24 @@ function SchedulePlan( element ) {
 		}
 	};
 
+function getScheduleTimestamp(time) {
+		//accepts hh:mm format - convert hh:mm to timestamp
+		time = time.replace(/ /g,'');
+		var timeArray = time.split(':');
+		var timeStamp = parseInt(timeArray[0])*60 + parseInt(timeArray[1]);
+		return timeStamp;
+	}
+
+	function transformElement(element, value) {
+		element.css({
+		    '-moz-transform': value,
+		    '-webkit-transform': value,
+			'-ms-transform': value,
+			'-o-transform': value,
+			'transform': value
+		});
+	}
+
 function initSchedule() {
     var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 	var transitionsSupported = ( $('.csstransitions').length > 0 );

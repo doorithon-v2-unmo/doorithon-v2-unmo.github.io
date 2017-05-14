@@ -148,7 +148,7 @@ function refreshTimetable(time_data) {
             $(temp).appendTo($($(".events-group")[i]).find('ul'));
         }
     }
-    
+    initSchedule();
 }
 
 window.onload = function () {
