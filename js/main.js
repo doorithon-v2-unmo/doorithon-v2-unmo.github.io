@@ -134,8 +134,15 @@ function refreshTimetable(time_data) {
     // TODO: Refresh view with ajax data
     console.log(time_data);
     for(var i in time_data){
-        /*$()
-        $(".events-group")[time_data[i].day]*/
+        for(var j in time_data[i]){
+            temp=$("#ske_clone").clone();
+
+            $(temp).attr("data-start",time_data[i][j].start_time);
+            var timecollid = time_data[i][j].end_time;
+            timecollid=timecollid.replace(":05",":00");
+            $(temp).attr("data-end",timecollid);
+            $(temp).appendTo($($(".events-group")[i]).find('ul'));
+        }
     }
 }
 
