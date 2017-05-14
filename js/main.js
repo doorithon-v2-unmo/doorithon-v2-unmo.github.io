@@ -149,6 +149,7 @@ function refreshTimetable(time_data) {
         }
     }
     $.SchedulePlan(document).initSchedule();
+    $.SchedulePlan(document).placeEvents();
     
 }
 
