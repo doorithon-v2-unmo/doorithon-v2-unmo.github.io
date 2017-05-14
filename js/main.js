@@ -2,7 +2,8 @@
  * Created by kde713 on 2017. 5. 14..
  */
 
-var global_friends_list;
+var global_friends_list=new Array();
+var global_groups_list=new Array();
 function procFriends() {
     showLoader();
     $.ajax({
@@ -23,9 +24,18 @@ function procFriends() {
             "nickname": nickname,
             "picture": picture
                     */
+                    var name=friends_list[obj].name;
+                    var id=friends_list[obj].id;
+                    var userid=friends_list[obj].userid;
                      temp=$("#clone").clone();
                     console.log(friends_list[obj]);
-                    $(temp).text(friends_list[obj].name);
+                    $(temp).text(name);
+                    global_friends_list.push(
+                        {
+                            "name":name,
+                            "userid":userid,
+                        });
+                    
                     $(temp).removeClass("hide").insertAfter("#friend_category");
                 }
                 setListener();
@@ -85,7 +95,7 @@ function ajaxSubmit() {
         url: "https://unmo.herokuapp.com/service/submit",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        data: JSON.stringify({"session_id": getSessionId(), "users": []}),
+        data: JSON.stringify({"session_id": getSessionId(), "users": global_groups_list}),
         success: function (data) {
             hideLoader();
 
@@ -111,6 +121,7 @@ function ajaxSubmit() {
 
 function refreshTimetable(time_data) {
     // TODO: Refresh view with ajax data
+    console.log(time_data);
 }
 
 window.onload = function () {
