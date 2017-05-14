@@ -14,8 +14,7 @@ function procFriends() {
             if (data.result) {
                 const friends_list = data.data;
                 // TODO: Render friends
-                temp=$("#clone").clone().insertAfter("#friend_category").removeClass("hide");
-                console.log(temp);
+               
                 for(obj in friends_list){
                     /*
                      "name": name,
@@ -24,6 +23,9 @@ function procFriends() {
             "nickname": nickname,
             "picture": picture
                     */
+                     temp=$("#clone").clone();
+                    $(temp).removeClass("hide").insertAfter("#friend_category");
+                    console.log(temp);
                     $(temp).text(obj.name);
                 }
                 
