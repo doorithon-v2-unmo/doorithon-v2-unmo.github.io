@@ -24,7 +24,9 @@ function procFriends() {
             "picture": picture
                     */
                      temp=$("#clone").clone();
-                    $(temp).removeClass("hide").text(obj.name).insertAfter("#friend_category");
+                    console.log(obj);
+                    $(temp).text(obj.name);
+                    $(temp).removeClass("hide").insertAfter("#friend_category");
                 }
                 
                 
