@@ -23,7 +23,7 @@ function procFriends() {
             "nickname": nickname,
             "picture": picture
                     */
-                    $(temp).text(obj.name
+                    $(temp).text(obj.name);
                 }
                 
                 
