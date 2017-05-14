@@ -18,7 +18,7 @@ function goToFriendCategory(obj){
         }
     );
 }
-$(document).ready(function () {
+function setListener() {
   for(i in $(".list-group-item")){
      if(($(".list-group-item")[i]).id=="group_category"){
         mode=2;
@@ -46,4 +46,4 @@ $(document).ready(function () {
         );
     }
   }
-});
+}

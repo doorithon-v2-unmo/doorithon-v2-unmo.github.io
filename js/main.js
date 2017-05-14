@@ -28,6 +28,7 @@ function procFriends() {
                     $(temp).text(obj.name);
                     $(temp).removeClass("hide").insertAfter("#friend_category");
                 }
+                setListener();
                 
                 
             } else {
